@@ -1,5 +1,5 @@
 import { Carousel } from "flowbite-react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function Item({
   src,
@@ -19,9 +19,11 @@ function Item({
         alt={alt}
         width={0}
         height={0}
-        layout="fill"
-        objectFit="contain"
-      />
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "contain"
+        }} />
       <div className="absolute text-left bg-black/10">
         <h3>{header}</h3>
         <p>{description}</p>
