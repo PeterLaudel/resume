@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  color: #a1a1b5; /* Light grey */
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  color: #737598; /* Grey */
+  font-size: 2rem; /* 32px */
+}
+
+h3 {
+  color: #4a4b5e; /* Dark grey */
+  font-size: 1.75rem; /* 28px */
+}
+
+main {
+  /* give me some nice background and text colors  for the alternating sections*/
+  > section:nth-child(odd) {
+    background: #1e213a; /* Dark blue */
+    color: #ffffff; /* White */
+  }
+
+  > section:nth-child(even) {
+    background: #252849; /* Darker blue */
+    color: #ffffff; /* White */
+  }
+}
+
+section {
+  padding: 2rem;
+}
+
+@layer base {
+}
+
+:root {
+  --background: #252849; /* Darker blue */
+  --foreground: #ffffff; /* White */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1e213a; /* Dark blue */
+    --foreground: #ffffff; /* White */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
