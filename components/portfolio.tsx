@@ -1,5 +1,5 @@
 import { Carousel } from "flowbite-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 function Item({
   src,
